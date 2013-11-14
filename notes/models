@@ -1,0 +1,113 @@
+/***	User 	***/
+user: {
+	first_name: "string"
+	, last_name: "string"
+	, dob: Date
+	, alias: "string"
+	, default_alias: "string"
+	, encrypted_password: "string"
+	, email: "string"
+	, status: "string"
+	, hash: "string"
+	, site_admin: boolean
+}
+
+/***	Tourney	***/
+tournament: {
+	year: int
+	, winner: "TeamID"
+	, midwest: {
+		winner: "TeamID"
+		, games: [
+			{
+				gameid: 0116
+				, winner: "TeamID"
+				, visitor_team: "TeamID"
+				, home_teach: "TeamID"
+				, home_score: int
+				, visitor_score: int
+				, date: Date
+				, location: "String"
+				, longitude: long
+				, latitude: latitude
+			}
+			, { gameid: 0215, ... }
+			, {	gameid: 0314, ... }
+			, { gameid: 0413, ... }
+			, { gameid: 0512, ... }
+			, { gameid: 0611, ... }
+			, { gameid: 0710, ... }
+			, { gameid: 0809, ... }
+			, { gameid: 0108, ... }
+			, { gameid: 0207, ... }
+			, { gameid: 0306, ... }
+			, { gameid: 0405, ... }
+			, { gameid: 0104, ... }
+			, { gameid: 0203, ... }
+			, { gameid: 0102, ... }
+		]
+		, seeds: [
+			{team: "TeamID", rank: 1}
+			, {team: "TeamID", rank: 2}
+			, {team: "TeamID", rank: 3}
+			, {team: "TeamID", rank: 4}
+			, {team: "TeamID", rank: 5}
+			, {team: "TeamID", rank: 6}
+			, {team: "TeamID", rank: 7}
+			, {team: "TeamID", rank: 8}
+			, {team: "TeamID", rank: 9}
+			, {team: "TeamID", rank: 10}
+			, {team: "TeamID", rank: 11}
+			, {team: "TeamID", rank: 12}
+		]
+	}
+	, south: ...
+	, west: ...
+	, east: ...
+	, final_four: {
+		winner: "string"
+		, games: [
+			{gameid: "soutmidwest", ... }
+			, {gameid: "eastwest", ... }
+			, {gameid: "final", ... }
+		]
+		, particpants: [
+			{team: "TeamID", bracket: "midwest"}
+			, {team: "TeamID", bracket: "south"}
+			, {team: "TeamID", bracket: "west"}
+			, {team: "TeamID", bracket: "east"}
+		]
+	}
+}
+
+/***	Pools 	****/
+Pool: {
+	name: "string"
+	, private: boolean
+	, password: "string"
+	, participants: [
+		{
+			user: "UserID"
+			, alias: "string"
+			, status: "string"
+			, comissioner: boolean
+		}
+	]
+	, tournaments: [
+		{
+			tournament: "TournamentID"
+			, scoring_method: "string"
+			, participants: [
+				{
+					user: "userID"
+					, picksheet: {
+						games: [gameID: {pick: TeamID, correct: boolean}, ...]
+						, final_game_aggregated_score: int
+						, current_score: int
+						, potential_score: int
+					}
+				}
+			]
+		}
+	]
+}
