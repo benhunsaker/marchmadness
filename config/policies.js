@@ -16,7 +16,28 @@ module.exports.policies = {
 
   // Default policy for all controllers and actions
   // (`true` allows public access) 
-  '*': true
+  '*': false
+  
+  , UserController: {
+  	"*": "isAuthenticated"
+  	, "registration": true
+  	, "create": true
+  	, "verify": true
+  	, "reset_password_request": true
+  	, "process_reset_password_request": true
+  	, "reset_password": true
+  	, "process_reset_password": true
+  }
+
+  , AuthController: {
+  	"login": true
+  	, "logout": true
+  	, "process": true
+  }
+
+  , AppController: {
+  	"*": "isAuthenticated"
+  }
 
   /*
 	// Here's an example of adding some policies to a controller

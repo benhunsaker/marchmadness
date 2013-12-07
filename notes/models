@@ -85,29 +85,31 @@ Pool: {
 	name: "string"
 	, private: boolean
 	, password: "string"
-	, participants: [
-		{
-			user: "UserID"
-			, alias: "string"
-			, status: "string"
-			, comissioner: boolean
-		}
-	]
 	, tournaments: [
 		{
 			tournament: "TournamentID"
 			, scoring_method: "string"
 			, participants: [
 				{
-					user: "userID"
-					, picksheet: {
-						games: [gameID: {pick: TeamID, correct: boolean}, ...]
-						, final_game_aggregated_score: int
-						, current_score: int
-						, potential_score: int
-					}
+					user: "UserID"
+					, picksheet: "PicksheetID"
 				}
+				, ...
 			]
 		}
 	]
+}
+
+/***	Picksheet ***/
+Picksheet: {
+	user: "UserID"
+	, pool: "PoorID"
+	, tournament: "TournamentID"
+	, games: [
+			gameID: {pick: TeamID, correct: boolean}
+			, ...
+	]
+	, final_game_aggregated_score: int
+	, current_score: int
+	, potential_score: int
 }

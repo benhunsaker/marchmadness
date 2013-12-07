@@ -1,0 +1,74 @@
+form {
+	width:350px;
+	margin:0 auto;
+}
+
+form .form-control {
+	position:relative;
+	font-size:16px;
+	height:auto;
+}
+
+form .form-control:focus {
+	z-index:50;
+}
+
+form .btn {
+	margin-bottom:10px;
+}
+
+form.form-signin #email {
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+	margin-bottom:-1px;
+}
+
+form.form-signin #password {
+	margin-bottom:10px;
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+}
+
+form.form-register #first-name {
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+	margin-bottom:-1px;	
+}
+
+form.form-register #last-name {
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+	margin-bottom:10px;
+}
+
+form.form-register #email {
+	margin-bottom:10px;
+}
+
+form.form-register #password {
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+	margin-bottom:-1px;
+}
+
+form.form-register #confirm-password {
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+	margin-bottom:10px;
+}
+
+form.form-reset-password-request #email {
+	margin-bottom:10px;
+}
+
+form.form-reset-password #password {
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+	margin-bottom:-1px;
+}
+
+form.form-reset-password #confirm-password {
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+	margin-bottom:10px;
+}
