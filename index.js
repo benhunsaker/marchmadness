@@ -1,3 +1,3 @@
 'use strict';
 
-require('./lib/app.js')();
+require('./lib/app.js');
