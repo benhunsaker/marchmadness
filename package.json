@@ -26,8 +26,8 @@
     "good-squeeze": "^5.1.0",
     "hapi": "^17.6.0",
     "hapi-pino": "^5.1.0",
-    "hoek": "^5.0.4",
     "inert": "^5.1.0",
+    "mongoose": "^5.3.7",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
